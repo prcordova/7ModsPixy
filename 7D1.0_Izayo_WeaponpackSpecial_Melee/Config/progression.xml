@@ -1,0 +1,50 @@
+<configs>
+
+					<!--Chonky's Code -->
+
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[@item='meleeWpnSledgeT3SteelSledgehammer']">
+	<unlock_entry item="IZYMeleeT4SledghammerSpikeMace" unlock_tier="1" tags="IZYMeleeT4SledghammerSpikeMace"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="IZYMeleeT4SledghammerSpikeMace"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="IZYMeleeT4SledghammerSpikeMace"/>
+</append>
+
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[@item='meleeWpnSpearT3SteelSpear']">
+	<unlock_entry item="IZYMeleeT4SpearPoleAxe" unlock_tier="1" tags="IZYMeleeT4SpearPoleAxe"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="IZYMeleeT4SpearPoleAxe"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="IZYMeleeT4SpearPoleAxe"/>
+</append>
+
+
+			<!-- Make IZY melee not recieving ATTACK Speed bonus -->
+			<!-- Make IZY melee not recieving ATTACK Speed bonus -->
+			<!-- Make IZY melee not recieving ATTACK Speed bonus -->
+<append xpath="/progression/perks/book[@name='perkSpearHunter5RapidStrike']">
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="IZY"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value="-.1" tags="perkJavelinMaster"/>
+		</effect_group>
+</append>
+
+<append xpath="/progression/perks/perk[@name='perkFlurryOfPerception']">
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="IZY"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3" value="-.1,-.17,-.25" tags="perkFlurryOfPerception"/>
+		</effect_group>
+</append>
+
+<append xpath="/progression/perks/perk[@name='perkFlurryOfStrength']">
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="IZY"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3" value="-.1,.17,.25" tags="perkFlurryOfStrength"/>
+		</effect_group>
+</append>
+
+
+
+<!-- -->
+
+</configs>	

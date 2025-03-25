@@ -1,0 +1,17 @@
+<configs>
+
+		<!--	GUN_TRADER	-->
+		
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+		<item name="IZYgunT0SMGPIPEsubmachinegun" quality="1,5"/>
+		<item name="IZYgunT2SMGUZIsubmachinegun" quality="1,5"/>
+		<item name="IZYgunT3SMGMP5Ksubmachinegun" quality="1,5"/>
+		<item name="IZYgunT4SMGColt9mmsubmachinegun" quality="1,5" prob="0.5"/>
+		<!--	AKIMbo	-->
+		<item name="IZYgunT1DualPistolCOLTnavyRevolver" quality="1,5"/>
+		<item name="IZYgunT2DualPistolM9bs" quality="1,5"/>
+		<item name="IZYgunT3DualPistolGlock18C" quality="1,5"/>
+		<item name="IZYgunT4DualPistolC96M" quality="1,5" prob="0.5"/>
+	</append>
+
+</configs>	

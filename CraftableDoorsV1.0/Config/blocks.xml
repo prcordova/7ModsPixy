@@ -1,0 +1,262 @@
+<configs>
+
+<append xpath="/blocks">
+
+<block name="craftableDoorsWoodLargeGate">
+	<property name="Extends" value="doorWoodLargeGate"/>
+	<property name="CustomIcon" value="doorWoodLargeGate"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsCommercialBulletproofGlassDoor">
+	<property name="Extends" value="commercialBulletproofGlassDoor"/>
+	<property name="CustomIcon" value="commercialBulletproofGlassDoor"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsManholeHatch">
+	<property name="Extends" value="manholeHatch"/>
+	<property name="CustomIcon" value="manholeHatch"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSecruityGates">
+	<property name="Extends" value="rollUpGate3x3White"/>
+	<property name="CustomIcon" value="rollUpGate3x3White"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="rollUpGate3x3White,rollUpGate4x3White,rollUpGate4x3DiagonalWhite,rollUpGate5x3White"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsElevatorDoors">
+	<property name="Extends" value="elevatorDoor"/>
+	<property name="CustomIcon" value="elevatorDoor"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="elevatorDoor,elevatorDoorDouble,elevatorDoorTenthBlock"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsChainlinkFenceGates">
+	<property name="Extends" value="chainlinkGateDoubleWide"/>
+	<property name="CustomIcon" value="chainlinkFenceDoorDouble"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="chainlinkGateDoubleWide,chainlinkGateDouble,chainlinkFenceDoor,chainlinkFenceDoorDouble"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSingleJailDoors">
+	<property name="Extends" value="jailDoorWhite"/>
+	<property name="CustomIcon" value="jailBarsWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="jailDoorWhite,jailDoorBrown,jailDoorYellow,jailDoorGreen,jailDoorBlue,jailDoorGrey"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleJailDoors">
+	<property name="Extends" value="jailDoorDoubleWhite"/>
+	<property name="CustomIcon" value="jailDoorDoubleWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="jailDoorDoubleWhite,jailDoorDoubleBrown,jailDoorDoubleYellow,jailDoorDoubleGreen,jailDoorDoubleBlue,jailDoorDoubleGrey"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleBulletproofGlassDoors">
+	<property name="Extends" value="commercialBulletproofGlassDoorDouble"/>
+	<property name="CustomIcon" value="commercialBulletproofSlidingDoor"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="commercialBulletproofGlassDoorDouble,commercialBulletproofSlidingDoor"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSingleDecorativeDoors">
+	<property name="Extends" value="bathroomStallDoor"/>
+	<property name="CustomIcon" value="closetDoorWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="bathroomStallDoor,tallCabinetDoorWhite,tallCabinetDoorBrown,tallCabinetDoorRed,tallCabinetDoorOrange,tallCabinetDoorYellow,tallCabinetDoorGreen,tallCabinetDoorBlue,tallCabinetDoorPurple,tallCabinetDoorGrey,tallCabinetDoorBlack,tallCabinetDoorPink,closetDoorWhite,closetDoorBrown,closetDoorRed,closetDoorOrange,closetDoorYellow,closetDoorGreen,closetDoorBlue,closetDoorPurple,closetDoorGrey,closetDoorPink,pantryDoorWhite,pantryDoorBrown,pantryDoorRed,pantryDoorOrange,pantryDoorYellow,pantryDoorGreen,pantryDoorBlue,pantryDoorPurple,pantryDoorGrey,pantryDoorPink,cntArmoireDoorsWhite,cntArmoireDoorsBrown,cntArmoireDoorsRed,cntArmoireDoorsOrange,cntArmoireDoorsYellow,cntArmoireDoorsGreen,cntArmoireDoorsBlue,cntArmoireDoorsPurple,cntArmoireDoorsGrey,cntArmoireDoorsBlack,cntArmoireDoorsPink,portaPottyDoorWhite,portaPottyDoorBrown,portaPottyDoorRed,portaPottyDoorOrange,portaPottyDoorYellow,portaPottyDoorGreen,portaPottyDoorBlue,portaPottyDoorPurple,portaPottyDoorGrey,portaPottyDoorPink"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleDecorativeDoors">
+	<property name="Extends" value="closetDoorDoubleWhite"/>
+	<property name="CustomIcon" value="closetDoorDoubleWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="closetDoorDoubleWhite,closetDoorDoubleBrown,closetDoorDoubleRed,closetDoorDoubleOrange,closetDoorDoubleYellow,closetDoorDoubleGreen,closetDoorDoubleBlue,closetDoorDoublePurple,closetDoorDoubleGrey,closetDoorDoublePink"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSingleWoodenDoors">
+	<property name="Extends" value="exteriorHouseDoorWhite"/>
+	<property name="CustomIcon" value="exteriorHouseDoorOldWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="exteriorHouseDoorWhite,exteriorHouseDoorBrown,exteriorHouseDoorRed,exteriorHouseDoorOrange,exteriorHouseDoorYellow,exteriorHouseDoorGreen,exteriorHouseDoorBlue,exteriorHouseDoorPurple,exteriorHouseDoorGrey,exteriorHouseDoorPink,exteriorHouseDoorOak,exteriorHouseDoorSideLightSingleWhite,exteriorHouseDoorSideLightSingleBrown,exteriorHouseDoorSideLightSingleRed,exteriorHouseDoorSideLightSingleOrange,exteriorHouseDoorSideLightSingleYellow,exteriorHouseDoorSideLightSingleGreen,exteriorHouseDoorSideLightSingleBlue,exteriorHouseDoorSideLightSinglePurple,exteriorHouseDoorSideLightSingleGrey,exteriorHouseDoorSideLightSinglePink,exteriorHouseDoorSideLightSingleOak,exteriorHouseDoorOldWhite,exteriorHouseDoorOldBrown,exteriorHouseDoorOldRed,exteriorHouseDoorOldOrange,exteriorHouseDoorOldYellow,exteriorHouseDoorOldGreen,exteriorHouseDoorOldBlue,exteriorHouseDoorOldPurple,exteriorHouseDoorOldGrey,exteriorHouseDoorOldPink,exteriorHouseDoorOldOak,frenchDoorWhite,frenchDoorBrown,frenchDoorRed,frenchDoorOrange,frenchDoorYellow,frenchDoorGreen,frenchDoorBlue,frenchDoorPurple,frenchDoorGrey,frenchDoorPink,frenchDoorOak,interiorHouseDoorWhite,interiorHouseDoorBrown,interiorHouseDoorRed,interiorHouseDoorOrange,interiorHouseDoorYellow,interiorHouseDoorGreen,interiorHouseDoorBlue,interiorHouseDoorPurple,interiorHouseDoorGrey,interiorHouseDoorPink,interiorHouseDoorOak,interiorDoorOldWhite,interiorDoorOldBrown,interiorDoorOldRed,interiorDoorOldOrange,interiorDoorOldYellow,interiorDoorOldGreen,interiorDoorOldBlue,interiorDoorOldPurple,interiorDoorOldGrey,interiorDoorOldPink,interiorDoorOldOak,woodenFenceDoorWhite,woodenFenceDoorBrown,woodenFenceDoorRed,woodenFenceDoorOrange,woodenFenceDoorYellow,woodenFenceDoorGreen,woodenFenceDoorBlue,woodenFenceDoorPurple,woodenFenceDoorGrey,woodenFenceDoorPink"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleWoodenDoors">
+	<property name="Extends" value="exteriorHouseDoorDoubleWhite"/>
+	<property name="CustomIcon" value="exteriorHouseDoorDoubleOldWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="exteriorHouseDoorDoubleWhite,exteriorHouseDoorDoubleBrown,exteriorHouseDoorDoubleRed,exteriorHouseDoorDoubleOrange,exteriorHouseDoorDoubleYellow,exteriorHouseDoorDoubleGreen,exteriorHouseDoorDoubleBlue,exteriorHouseDoorDoublePurple,exteriorHouseDoorDoubleGrey,exteriorHouseDoorDoublePink,exteriorHouseDoorDoubleOak,exteriorHouseDoorSideLightWhite,exteriorHouseDoorSideLightBrown,exteriorHouseDoorSideLightRed,exteriorHouseDoorSideLightOrange,exteriorHouseDoorSideLightYellow,exteriorHouseDoorSideLightGreen,exteriorHouseDoorSideLightBlue,exteriorHouseDoorSideLightPurple,exteriorHouseDoorSideLightGrey,exteriorHouseDoorSideLightPink,exteriorHouseDoorSideLightOak,exteriorHouseDoorDoubleOldWhite,exteriorHouseDoorDoubleOldBrown,exteriorHouseDoorDoubleOldRed,exteriorHouseDoorDoubleOldOrange,exteriorHouseDoorDoubleOldYellow,exteriorHouseDoorDoubleOldGreen,exteriorHouseDoorDoubleOldBlue,exteriorHouseDoorDoubleOldPurple,exteriorHouseDoorDoubleOldGrey,exteriorHouseDoorDoubleOldPink,exteriorHouseDoorDoubleOldOak,frenchDoorDoubleWhite,frenchDoorDoubleBrown,frenchDoorDoubleRed,frenchDoorDoubleOrange,frenchDoorDoubleYellow,frenchDoorDoubleGreen,frenchDoorDoubleBlue,frenchDoorDoublePurple,frenchDoorDoubleGrey,frenchDoorDoublePink,frenchDoorDoubleOak,interiorHouseDoorDoubleWhite,interiorHouseDoorDoubleBrown,interiorHouseDoorDoubleRed,interiorHouseDoorDoubleOrange,interiorHouseDoorDoubleYellow,interiorHouseDoorDoubleGreen,interiorHouseDoorDoubleBlue,interiorHouseDoorDoublePurple,interiorHouseDoorDoubleGrey,interiorHouseDoorDoublePink,interiorHouseDoorDoubleOak,interiorDoorOldDoubleWhite,interiorDoorOldDoubleBrown,interiorDoorOldDoubleRed,interiorDoorOldDoubleOrange,interiorDoorOldDoubleYellow,interiorDoorOldDoubleGreen,interiorDoorOldDoubleBlue,interiorDoorOldDoublePurple,interiorDoorOldDoubleGrey,interiorDoorOldDoublePink,interiorDoorOldDoubleOak"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSingleWeakMetalDoors">
+	<property name="Extends" value="exteriorScreenDoor"/>
+	<property name="CustomIcon" value="exteriorScreenDoor"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="exteriorScreenDoor,exteriorScreenDoornNoFrame,commercialGlassDoor,trailerDoorWhite,trailerDoorBrown,trailerDoorRed,trailerDoorOrange,trailerDoorYellow,trailerDoorGreen,trailerDoorBlue,trailerDoorPurple,trailerDoorGrey,trailerDoorBlack,trailerDoorPink,trailerDoorArmyGreen"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleGlassDoors">
+	<property name="Extends" value="houseSlidingDoorWhite"/>
+	<property name="CustomIcon" value="houseSlidingDoorWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="houseSlidingDoorWhite,houseSlidingDoorBlack,commercialGlassDoorDouble,commercialSlidingDoor"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsSingleStrongMetalDoors">
+	<property name="Extends" value="commercialDoorV1White"/>
+	<property name="CustomIcon" value="commercialDoorV1White"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="commercialDoorV1White,commercialDoorV1Brown,commercialDoorV1Red,commercialDoorV1Orange,commercialDoorV1Yellow,commercialDoorV1Green,commercialDoorV1Blue,commercialDoorV1Purple,commercialDoorV1Grey,commercialDoorV1Pink,commercialDoorV1Oak,commercialDoorV2White,commercialDoorV2Brown,commercialDoorV2Red,commercialDoorV2Orange,commercialDoorV2Yellow,commercialDoorV2Green,commercialDoorV2Blue,commercialDoorV2Purple,commercialDoorV2Grey,commercialDoorV2Pink,commercialDoorV2Oak,commercialDoorV3White,commercialDoorV3Brown,commercialDoorV3Red,commercialDoorV3Orange,commercialDoorV3Yellow,commercialDoorV3Green,commercialDoorV3Blue,commercialDoorV3Purple,commercialDoorV3Grey,commercialDoorV3Pink,commercialDoorV3Oak,commercialDoorV4White,commercialDoorV4Brown,commercialDoorV4Red,commercialDoorV4Orange,commercialDoorV4Yellow,commercialDoorV4Green,commercialDoorV4Blue,commercialDoorV4Purple,commercialDoorV4Grey,commercialDoorV4Pink,commercialDoorV4Oak"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsDoubleStrongMetalDoors">
+	<property name="Extends" value="commercialDoorDoubleV1White"/>
+	<property name="CustomIcon" value="commercialDoorDoubleV1White"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="commercialDoorDoubleV1White,commercialDoorDoubleV1Brown,commercialDoorDoubleV1Red,commercialDoorDoubleV1Orange,commercialDoorDoubleV1Yellow,commercialDoorDoubleV1Green,commercialDoorDoubleV1Blue,commercialDoorDoubleV1Purple,commercialDoorDoubleV1Grey,commercialDoorDoubleV1Pink,commercialDoorDoubleV1Oak,commercialDoorDoubleV2White,commercialDoorDoubleV2Brown,commercialDoorDoubleV2Red,commercialDoorDoubleV2Orange,commercialDoorDoubleV2Yellow,commercialDoorDoubleV2Green,commercialDoorDoubleV2Blue,commercialDoorDoubleV2Purple,commercialDoorDoubleV2Grey,commercialDoorDoubleV2Pink,commercialDoorDoubleV2Oak,commercialDoorDoubleV3White,commercialDoorDoubleV3Brown,commercialDoorDoubleV3Red,commercialDoorDoubleV3Orange,commercialDoorDoubleV3Yellow,commercialDoorDoubleV3Green,commercialDoorDoubleV3Blue,commercialDoorDoubleV3Purple,commercialDoorDoubleV3Grey,commercialDoorDoubleV3Pink,commercialDoorDoubleV3Oak,commercialDoorDoubleV4White,commercialDoorDoubleV4Brown,commercialDoorDoubleV4Red,commercialDoorDoubleV4Orange,commercialDoorDoubleV4Yellow,commercialDoorDoubleV4Green,commercialDoorDoubleV4Blue,commercialDoorDoubleV4Purple,commercialDoorDoubleV4Grey,commercialDoorDoubleV4Pink,commercialDoorDoubleV4Oak"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+<block name="craftableDoorsPortaPotties">
+	<property name="Extends" value="portaPottyWhite"/>
+	<property name="CustomIcon" value="portaPottyWhite"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="portaPottyWhite,portaPottyBrown,portaPottyRed,portaPottyOrange,portaPottyYellow,portaPottyGreen,portaPottyBlue,portaPottyPurple,portaPottyGrey,portaPottyPink"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	<property name="SellableToTrader" value="false"/>
+</block>
+
+</append>
+
+</configs>

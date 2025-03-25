@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+		<Name value="Craftable_Doors"/>
+		<DisplayName value="Craftable Doors 1.0" />
+		<Description value="Add a crafting recipe for all doors in the game."/>
+		<Author value="LuckyIsh"/>
+		<Version value="1.0"/>
+</xml>

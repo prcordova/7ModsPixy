@@ -1,0 +1,29 @@
+<configs>
+
+
+	<insertAfter xpath="/gameevents/action_sequence[@name='action_give_points']">
+
+		<action_sequence name="action_give_points_lp">
+
+			<action class="AddSkillPoints">
+				<property name="skill_points" value="1" />
+			</action>
+
+		</action_sequence>
+
+		<action_sequence name="action_remove_items_lp">
+
+			<action class="CloseWindow" />
+
+			<action class="RemoveItems">
+				<property name="items_location" value="Toolbelt,Backpack" />
+				<property name="items_tags" value="removeitemslp" />
+				<property name="count" value="1" />
+			</action>
+
+		</action_sequence>
+
+	</insertAfter>
+
+
+</configs>

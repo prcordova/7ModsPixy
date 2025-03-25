@@ -1,0 +1,131 @@
+<configs>
+	
+<!--======== Bulletproof Glass =========-->
+
+	<append xpath="/shapes/shape[@name='windowStoreOneSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreTwoSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreThreeSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreFourSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStorePaneBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreOneSidedCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreTwoSidedCornerLeftBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreTwoSidedCornerRightBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreTwoSidedCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreThreeSidedCornerLeftBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreThreeSidedCornerRightBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreThreeSidedCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreFourSidedCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreCornerCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowRampTwoSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowRampFourSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowRampOutsideCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreThreeSidedTriangleBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	
+	
+	<append xpath="/shapes/shape[@name='windowRampDiagonalCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60TipFourSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60FourSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60TipTwoSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60TwoSidedBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60TipOutsideCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowWedge60OutsideCornerBulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreWedge60TipBulletproofLeft']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreWedge60TipBulletproofRight']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowStoreWedge60BulletproofLeft']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowIndustrial01BulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+	<append xpath="/shapes/shape[@name='windowIndustrial02BulletproofFull']" >
+      	<property name="ShapeMenu" value="true" />
+    </append>
+	
+</configs>

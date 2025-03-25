@@ -1,0 +1,75 @@
+<configs>
+<!--======== Recipes for the flags, jail doors, barbed wire, and hesco blocks =========-->
+
+    <append xpath="/recipes">
+	
+		<recipe name="flagBlockVariantHelper" count="1">
+			<ingredient name="resourceCloth" count="44"/>
+		</recipe>	
+		
+		<recipe name="JailVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+		</recipe>
+		
+		<recipe name="barbedWireSpindleVariantHelper" count="1">
+			<ingredient name="resourceScrapIron" count="25"/>
+		</recipe>
+		
+		<recipe name="HoistVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="1"/>
+		</recipe>
+		
+		<recipe name="barrierMilitary" count="1"  craft_time="15" craft_area="cementMixer" tags="cementMixerCrafting">
+			<ingredient name="resourceScrapIron" count="4"/>
+			<ingredient name="resourceCloth" count="2"/>
+			<ingredient name="resourceClayLump" count="15"/>			
+		</recipe>	
+
+		<recipe name="barrierMilitary" count="1"  craft_time="15" craft_area="cementMixer" tags="cementMixerCrafting">
+			<ingredient name="resourceScrapIron" count="4"/>
+			<ingredient name="resourceCloth" count="2"/>
+			<ingredient name="resourceCrushedSand" count="15"/>			
+		</recipe>
+
+		<recipe name="GUNS_LOGO_NEW" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceHeadlight" count="1"/>
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceDuctTape" count="4"/>
+			<ingredient name="resourceOil" count="5"/>
+		</recipe>
+
+		<recipe name="CorrugatedMetalSheetVariantHelper" count="1" craft_time="15">
+			<ingredient name="resourceForgedIron" count="5"/>
+		</recipe>	
+
+		<recipe name="BanditPlatformVariantHelper" count="1" craft_time="15">
+			<ingredient name="resourceWood" count="25"/>
+			<ingredient name="resourceNail" count="10"/>
+		</recipe>			
+		
+		<recipe name="flagPoleWhiteRiver" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceCloth" count="44"/>
+		</recipe>
+		
+		<recipe name="flagPoleTrader" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceCloth" count="44"/>
+		</recipe>
+		
+		<recipe name="flagPoleAmerican" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceCloth" count="44"/>
+		</recipe>
+	
+	</append>
+
+</configs>

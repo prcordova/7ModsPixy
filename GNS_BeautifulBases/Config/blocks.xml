@@ -1,0 +1,445 @@
+<configs>
+	
+<!--======== Removes harvested materials from neon signs =========-->
+
+	<remove xpath="/blocks/block[@name='signNeonColdBeer']/drop[@event='Harvest']"/>	
+	<remove xpath="/blocks/block[@name='signNeonColdBeer']/drop[@event='Destroy']"/>
+	
+	<remove xpath="/blocks/block[@name='signOpenWallMountChain']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='signOpenWallMountChain']/drop[@event='Destroy']"/>
+	
+<!--======== Makes neon signs salvageable, powerable, and pickupable =========-->
+
+	<append xpath="/blocks/block[@name='signOpenWallMountChain']" >
+      	<drop event="Destroy" name="opensignBlockVariantHelper" count="1" tag="salvageHarvest"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="TakeDelay" value="3"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='signNeonColdBeer']" >
+      	<drop event="Destroy" name="signNeonColdBeer" count="1" tag="salvageHarvest"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="TakeDelay" value="3"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks">
+		<block name="opensignBlockVariantHelper">
+			<property name="Extends" value="signOpenWallMountChain"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="signOpenWallMountChain"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value= "signOpenWallMountChain,signOpenWallMountFrame,signOpenSideMount,signOpenCeilingMount"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+			<property name="CustomIcon" value="signOpenWallMountChain"/>
+		</block>
+	</append>
+	
+<!--======== Makes posters and some decor pickupable =========-->
+	
+	<append xpath="/blocks/block[@name='signPosterWantedMissing01']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='signPosterWantedMissing02']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='pictureFrame_01a']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='pictureFramedMedalsLrg']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='decoPoolTable']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='decoClassicDogHouse']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='decoBasketBallHoop']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='decoMannequinMilitaryCommando']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='woodenBear']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='rugBear']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	<append xpath="/blocks/block[@name='signNoParkingHanging']" >
+      	<property name="CanPickup" value="true" param1="signNoParkingHanging"/>
+    </append>
+	<append xpath="/blocks/block[@name='signCrossWalkYellowHanging']" >
+      	<property name="CanPickup" value="true" param1="signCrossWalkYellowHanging"/>
+    </append>
+	<append xpath="/blocks/block[@name='signSlowHanging']" >
+      	<property name="CanPickup" value="true" param1="signSlowHanging"/>
+    </append>
+	<append xpath="/blocks/block[@name='signDoNotEnterHanging']" >
+      	<property name="CanPickup" value="true" param1="signDoNotEnterHanging"/>
+    </append>
+	<append xpath="/blocks/block[@name='signNeighborhoodWatch']" >
+      	<property name="CanPickup" value="true" param1="signNeighborhoodWatch"/>
+    </append>
+	<append xpath="/blocks/block[@name='signPrivateProperty']" >
+      	<property name="CanPickup" value="true" param1="signPrivateProperty"/>
+    </append>
+	<append xpath="/blocks/block[@name='signNotice']" >
+      	<property name="CanPickup" value="true" param1="signNotice"/>
+    </append>
+	<append xpath="/blocks/block[@name='signNoticeTrader']" >
+      	<property name="CanPickup" value="true" param1="signNoticeTrader"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinSafety']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinSafety"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinSafety2']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinSafety2"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsWideWarning']" >
+      	<property name="CanPickup" value="true" param1="signGunsWideWarning"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsWideWarning2']" >
+      	<property name="CanPickup" value="true" param1="signGunsWideWarning2"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinAttention']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinAttention"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinNo']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinNo"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinPermitted']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinPermitted"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinPrivate']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinPrivate"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinReturn']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinReturn"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinSmile']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinSmile"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGunsThinSmoke']" >
+      	<property name="CanPickup" value="true" param1="signGunsThinSmoke"/>
+    </append>
+	<append xpath="/blocks/block[@name='signPassNGasHanging']" >
+      	<property name="CanPickup" value="true" param1="signPassNGasHanging"/>
+    </append>
+	<append xpath="/blocks/block[@name='signPassNGasHanging2']" >
+      	<property name="CanPickup" value="true" param1="signPassNGasHanging2"/>
+    </append>
+	<append xpath="/blocks/block[@name='signRoadPrivate']" >
+      	<property name="CanPickup" value="true" param1="signRoadPrivate"/>
+    </append>
+	<append xpath="/blocks/block[@name='signYardSign01']" >
+      	<property name="CanPickup" value="true" param1="signYardSign01"/>
+    </append>
+	<append xpath="/blocks/block[@name='signGas01']" >
+      	<property name="CanPickup" value="true"/>
+    </append>
+	
+<!--======== Makes flags pickupable as a new variable helper =========-->
+	
+	<append xpath="/blocks/block[@name='flagWallHungUSA']" >
+      	<property name="CanPickup" value="true" param1="flagBlockVariantHelper"/>
+    </append>
+	<append xpath="/blocks/block[@name='flagTopWallHungUSA']" >
+      	<property name="CanPickup" value="true" param1="flagBlockVariantHelper"/>
+    </append>
+	
+	<append xpath="/blocks">
+		<block name="flagBlockVariantHelper">
+			<property name="Extends" value="flagWallHungUSA"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="flagWallHungUSA"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="flagWallHungUSA"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="flagWallHungUSA,flagWallHungDuke,flagWallHungHonorDuty,flagWallHungValiant,flagWallHungTFP,flagWallHungGadsdenWhite,flagWallHungGadsdenBrown,flagWallHungGadsdenRed,flagWallHungGadsdenOrange,flagWallHungGadsdenYellow,flagWallHungGadsdenGreen,flagWallHungGadsdenBlue,flagWallHungGadsdenPurple,flagWallHungGadsdenGrey,flagWallHungGadsdenPink,flagWallHungGadsdenArmyGreen,flagTopWallHungUSA,flagTopWallHungDuke,flagTopWallHungHonorDuty,flagTopWallHungValiant,flagTopWallHungTFP,flagTopWallHungGadsdenWhite,flagTopWallHungGadsdenBrown,flagTopWallHungGadsdenRed,flagTopWallHungGadsdenOrange,flagTopWallHungGadsdenYellow,flagTopWallHungGadsdenGreen,flagTopWallHungGadsdenBlue,flagTopWallHungGadsdenPurple,flagTopWallHungGadsdenGrey,flagTopWallHungGadsdenPink,flagTopWallHungGadsdenArmyGreen,flagWallHungThick44Black,flagWallHungThick44Purple,flagTopWallHungThick44Purple,flagTopWallHungThick44Black,GUNS_FLAG"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+<!--======== Makes a jail door/wall variable helper =========-->
+
+	<append xpath="/blocks">
+		<block name="JailVariantHelper">
+			<property name="Extends" value="jailDoorWhite"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="jailDoorWhite"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="jailDoorWhite"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="jailDoorWhite,jailDoorBrown,jailDoorYellow,jailDoorGreen,jailDoorBlue,jailDoorGrey,jailDoorDoubleWhite,jailDoorDoubleBrown,jailDoorDoubleYellow,jailDoorDoubleGreen,jailDoorDoubleBlue,jailDoorDoubleGrey,jailBarsWhite,jailBarsBrown,jailBarsYellow,jailBarsGreen,jailBarsBlue,jailBarsGrey"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+<!--======== Makes a hoist variable helper =========-->
+
+	<append xpath="/blocks">
+		<block name="HoistVariantHelper">
+			<property name="Extends" value="decoHoistHook"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="decoHoistHook"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="decoHoistHook"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="decoHoistHook,decoHoistChain,decoHoistSpreader,decoHoistMagnet,decoHoistTopMount"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+<!--======== Makes a barbed wire variable helper =========-->
+
+	<append xpath="/blocks">
+		<block name="barbedWireSpindleVariantHelper">
+			<property name="Extends" value="barbedWireSpindle1m"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="barbedWireSpindle1m"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="barbedWireSpindle1m"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="barbedWireSpindle1m,barbedWireSheet,barbedWireSpindle,barbedWireSpindleDiagonal1m,barbedWireSpindle2,barbedWireSpindle3,barbedWireSpindle4"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+	
+<!--======== GNS Logo & Flag by Mumpfy =========-->
+
+	<append xpath="/blocks">	
+		<block name="GUNS_LOGO_NEW">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="OnlySimpleRotations" value="true"/> 
+			<property name="CanPickup" value="true" /> 
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="2,5"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="decorativeBlockGroupDesc"/> 
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/LOGOOK.unity3d?OK" />
+			<property name="CustomIcon" value="guns_icon"/> 
+		</block>
+	
+		<block name="GUNS_FLAG">
+			<property name="Extends" value="flagWallHungUSA"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/gunsflagok.unity3d?GNS_flag"/>
+			<property name="SortOrder2" value="0099"/>
+			<property name="CustomIcon" value="guns_icon"/>
+		</block>	
+	</append>
+
+<!--======== Hydroponics =========-->
+
+	<remove xpath="/blocks/block[@name='plantHydroponicAloe']/drop[@event='Destroy']"/>
+	<remove xpath="/blocks/block[@name='plantHydroponicAloe']/drop[@event='Harvest']"/>
+
+	<remove xpath="/blocks/block[@name='plantHydroponicVertical']/property[@name='Extends']"/>
+
+	<append xpath="/blocks/block[@name='plantHydroponicAloe']" >
+      	<drop event="Destroy" name="plantHydroponicAloePlayer" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='plantHydroponicVertical']" >	
+		<property name="CreativeMode" value="Dev"/>
+		<property name="Class" value="Light"/>
+		<property name="IndexName" value="POILight"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/plantHydroponicVerticalPrefab"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="WaterFlow" value="permitted"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="EconomicValue" value="56"/>
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="1"/>
+			<property name="resourceElectricParts" value="3"/>
+		</property>
+      	<drop event="Destroy" name="plantHydroponicVerticalPlayer" count="1" tag="salvageHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
+		<property name="SortOrder1" value="B202"/>
+		<property name="SortOrder2" value="3500"/>
+		<property name="FilterTags" value="MC_building,SC_decor,A21_NEW"/>
+    </append>
+	
+	<append xpath="/blocks">
+		<block name="plantHydroponicAloePlayer">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="PoweredLight"/>
+			<property name="IndexName" value="POILight"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantHydroponicAloePrefab"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="EconomicValue" value="56"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Destroy" name="plantHydroponicAloePlayer" count="1" tag="salvageHarvest"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
+			<property name="SortOrder1" value="B202"/>
+			<property name="SortOrder2" value="3500"/>
+			<property name="FilterTags" value="MC_building,SC_decor,A21_NEW"/>
+			<property name="TakeDelay" value="3"/>
+			<property name="CustomIcon" value="plantHydroponicAloe"/>
+		</block>
+    </append>
+	
+	<append xpath="/blocks">
+		<block name="plantHydroponicVerticalPlayer">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="PoweredLight"/>
+			<property name="IndexName" value="POILight"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plantHydroponicVerticalPrefab"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="EconomicValue" value="56"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Destroy" name="plantHydroponicVerticalPlayer" count="1" tag="salvageHarvest"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
+			<property name="SortOrder1" value="B202"/>
+			<property name="SortOrder2" value="3500"/>
+			<property name="FilterTags" value="MC_building,SC_decor,A21_NEW"/>
+			<property name="TakeDelay" value="3"/>
+			<property name="CustomIcon" value="plantHydroponicVertical"/>
+		</block>
+	</append>
+	
+<!--======== Radio =========-->
+	
+	<append xpath="/blocks/block[@name='radioHam']" >
+      	<property name="CanPickup" value="true" param1="radioHam"/>
+    </append>
+	
+<!--======== Bulletproof Glass (adds dark glass plates) =========-->
+
+	<append xpath="/blocks/block[@name='glassBulletproofBlockVariantHelper']" >
+      	<property name="PlaceAltBlockValue" value="glassBulletproofPlate,glassOpaqueBulletproofPlate,glassBulletproofCTRPlate,glassOpaqueBulletproofCTRPlate,glassBulletproofPlateCurved,glassBulletproofRamp,glassBulletproofRampSheet"/>
+    </append>
+	
+<!--======== Corrugated Metal Sheets =========-->
+
+	<append xpath="/blocks">
+		<block name="CorrugatedMetalSheetVariantHelper">
+			<property name="Extends" value="banditWallCorrugated1x2.5"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="banditWallCorrugated1x2.5"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="banditWallCorrugated1x2.5"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="banditWallCorrugated1x2.5,banditWallCorrugated1x3,banditWallCorrugated1x4,banditWallCorrugated2x3,banditWallCorrugatedDiagonal2x3,banditWallCorrugatedDiagonal1x3,banditWallCorrugatedDiagonal3x1,banditWallCorrugatedDiagonal1x2,banditWallCorrugatedDiagonal1x1,banditWallRibbed2x1White,banditWallRibbed2x1Brown,banditWallRibbed2x1Red,banditWallRibbed2x1Orange,banditWallRibbed2x1Yellow,banditWallRibbed2x1Green,banditWallRibbed2x1Blue,banditWallRibbed2x1Grey,banditWallRibbed3x2White,banditWallRibbed3x2Brown,banditWallRibbed3x2Red,banditWallRibbed3x2Orange,banditWallRibbed3x2Yellow,banditWallRibbed3x2Green,banditWallRibbed3x2Blue,banditWallRibbed3x2Grey,banditWallRibbedDiagonal2x1White,banditWallRibbedDiagonal2x1Brown,banditWallRibbedDiagonal2x1Red,banditWallRibbedDiagonal2x1Orange,banditWallRibbedDiagonal2x1Yellow,banditWallRibbedDiagonal2x1Green,banditWallRibbedDiagonal2x1Blue,banditWallRibbedDiagonal2x1Grey,banditWallSiding1x4White,banditWallSiding1x4Brown,banditWallSiding1x4Red,banditWallSiding1x4Orange,banditWallSiding1x4Yellow,banditWallSiding1x4Green,banditWallSiding1x4Blue,banditWallSiding1x4Grey,banditWallSiding2x2White,banditWallSiding2x2Brown,banditWallSiding2x2Red,banditWallSiding2x2Orange,banditWallSiding2x2Yellow,banditWallSiding2x2Green,banditWallSiding2x2Blue,banditWallSiding2x2Grey,banditWallSiding3x3White,banditWallSiding3x3Brown,banditWallSiding3x3Red,banditWallSiding3x3Orange,banditWallSiding3x3Yellow,banditWallSiding3x3Green,banditWallSiding3x3Blue,banditWallSiding3x3Grey,banditWallSidingDiagonal2x2White,banditWallSidingDiagonal2x2Brown,banditWallSidingDiagonal2x2Red,banditWallSidingDiagonal2x2Orange,banditWallSidingDiagonal2x2Yellow,banditWallSidingDiagonal2x2Green,banditWallSidingDiagonal2x2Blue,banditWallSidingDiagonal2x2Grey,banditWallStreetsign3x2"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+<!--======== Wood Platforms =========-->
+	
+	<append xpath="/blocks">
+		<block name="BanditPlatformVariantHelper">
+			<property name="Extends" value="banditPlatform2x2A"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="banditPlatform2x2A"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="banditPlatform2x2A"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="banditPlatform2x2A,banditPlatform3x2A,banditPlatform3x3A,banditPlatform3x3B,banditPlatform3x3BrokenA,banditPlatform3x3BrokenB,banditPlatform3x3BrokenC,banditPlatformSheet3x2A,banditPlatformSheet3x3A,banditPlatformSheet3x3B,banditRamp2x2A,banditRamp3x2A,banditRamp3x3A,banditRampSheet2x2A,banditRampSheet3x2A,banditRampSheet3x3A,banditSupport1m,banditSupport2m,banditSupport3m,banditSupportBroken1m,banditSupportBroken2m,banditSupportBroken3m,banditSupport3x1A,banditSupport3x1B,banditSupport2x2A,banditSupport3x2A,banditSupport3x3A"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+	<append xpath="/blocks/block[@name='banditPlatform2x2A']" >
+      	<property name="Material" value="MtreeWoodLarge"/>
+    </append>
+
+<!--======== Mannequins =========-->
+	
+	<append xpath="/blocks/block[@name='decoMannequinMale']" >
+      	<property name="CanPickup" value="true" param1="decoMannequinMale"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='decoMannequinMaleBroken']" >
+      	<property name="CanPickup" value="true" param1="decoMannequinMaleBroken"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='decoMannequinFemale']" >
+      	<property name="CanPickup" value="true" param1="decoMannequinFemale"/>
+    </append>
+	
+	<append xpath="/blocks/block[@name='decoMannequinFemaleBroken']" >
+      	<property name="CanPickup" value="true" param1="decoMannequinFemaleBroken"/>
+    </append>
+	
+<!--======== Spotlights Rotation =========-->
+	
+	<append xpath="/blocks/block[@name='spotlightPlayer']" >
+      	<property name="OnlySimpleRotations" value="false"/>
+    </append>
+	
+<!--======== Old Lantern Helper =========-->
+
+	<!-- <append xpath="/blocks/block[@name='lanternOld_01']" >
+      	<property name="CreativeMode" value="Player"/>
+		<property name="Class" value=""/>
+		<property name="CanPickup" value="true" param1="lanternOldDecorLightBlockVariantHelper"/>
+    </append>	
+	
+	<append xpath="/blocks">
+		<block name="lanternOldDecorLightBlockVariantHelper">
+			<property name="Extends" value="lanternOld_01"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="lanternOld_01"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="lanternOld_01,lanternOld_02,lanternOld_03,lanternOld_04"/>
+			<property name="SortOrder1" value="U200"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append> -->
+</configs>

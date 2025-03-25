@@ -1,0 +1,39 @@
+<configs>
+
+
+	<insertAfter xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']">
+
+		<item name="drinkSkillPointLP">	<!-- This item can only be received by using command console. --><!-- Type 'giveself drinkskillpointlp' in command console [F1]. -->
+			<property name="CustomIcon" value="lp_items_drinkskillpoint"/>
+			<property name="TintColor" value="38,31,25"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="20"/> <!-- STK resource -->
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="SoundPickup" value="grandpas_fergitn_grab"/>
+			<property name="SoundPlace" value="grandpas_fergitn_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="PromptTitle" value="drinkSkillPointLPPromptTitle"/>
+				<property name="PromptDescription" value="drinkSkillPointLPPromptDesc"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="action_give_points_lp" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook" play_in_head="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="drinkSkillPointLPTooltip"/>
+			</effect_group>
+		</item>
+
+	</insertAfter>
+
+	<insertBefore xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='HoldType']">
+		<property name="Tags" value="removeitemslp"/>
+	</insertBefore>
+
+</configs>

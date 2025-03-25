@@ -1,0 +1,661 @@
+<Config>
+
+	<append xpath="/entity_classes">
+
+		<entity_class name="MALE_NURSE_GG_ZOMBIE" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Nurse_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+				<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- slim, regular -->
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+			<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="MALE_NURSE_GG_RADIATED_ZOMBIE" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Nurse_GG_Zombie_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="ExperienceGain" value="1200"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/> <!-- Boss damage -->
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+			<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="MALE_NURSE_GG_FERAL_ZOMBIE" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Nurse_GG_Zombie_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="FEMALE_COP_GG_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Female_Cop_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="FEMALE_COP_GG_RADIATED_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Female_Cop_GG_Zombie_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombieFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="MoveSpeedAggro" value=".5, 1.35"/>
+				<property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="FEMALE_COP_GG_FERAL_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Female_Cop_GG_Zombie_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombieFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value=".5, 1.35"/>
+				<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="550"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="FIREFIGHTER_MALE_GG_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?FireFighter_Male_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="2"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="MoveSpeedAggro" value="0.2, 1.2"/>
+				<property name="JumpMaxDistance" value=".8, 1.1"/>
+				<property name="HandItem" value="meleeHandZombieStrong"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="ExperienceGain" value="750"/><!-- XP strong -->
+				<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+			<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="FIREFIGHTER_MALE_GG_RADIATED_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?FireFighter_Male_GG_Zombie_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="2"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="MoveSpeedAggro" value="0.2, 1.2"/>
+				<property name="JumpMaxDistance" value=".8, 1.1"/>
+				<property name="HandItem" value="meleeHandZombieStrong"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="ExperienceGain" value="1500"/><!-- XP strong radiated -->
+				<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1900"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="FIREFIGHTER_MALE_GG_FERAL_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?FireFighter_Male_GG_Zombie_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="2"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value="0.45, 1.3"/> <!-- strong, feral -->
+				<property name="JumpMaxDistance" value="1.8, 2.5"/>
+				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="ExperienceGain" value="1200"/><!-- XP strong feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="950"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="MALE_CADAVER_GG_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Cadaver_GG_Zombie_REV2_DEFAULT_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+				<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- slim, regular -->
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="MALE_CADAVER_GG_RADIATED" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Cadaver_GG_Zombie_REV2_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="MALE_CADAVER_GG_FERAL" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Male_Cadaver_GG_Zombie_REV2_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.05"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_MALE_GG_ZOMBIE" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Male_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion" value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_MALE_GG_RADIATED" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Male_GG_Zombie_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion" value="true"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+				<!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="HandItem" value="meleeHandZombieFeral"/>
+				<!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4.5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+			<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_MALE_GG_FERAL" extends="zombieTemplateMale">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Male_GG_Zombie_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion" value="true"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value=".5, 1.35"/>
+				<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="HandItem" value="meleeHandZombieFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="550"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+			<property name="SizeScale" value="1.1"/>  
+		</entity_class>
+
+		<entity_class name="ROTTEN_FEMALE_CADAVER_GG_ZOMBIE" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Rotten_Female_Cadaver_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- slim, regular -->
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="ROTTEN_FEMALE_CADAVER_GG_RADIATED" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Rotten_Female_Cadaver_GG_Zombie_RADIATED_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+			<effect_group name="Base Effects">	
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="SizeScale" value="1"/>
+		</entity_class>
+
+		<entity_class name="ROTTEN_FEMALE_CADAVER_GG_FERAL" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Rotten_Female_Cadaver_GG_Zombie_FERAL_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+				<property name="WalkType" value="7"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<effect_group name="Base Effects">	
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>	
+				   <property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_FEMALE_GG_ZOMBIE" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Female_GG_Zombie_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="HandItem" value="meleeHandZombie01"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- slim, regular -->
+				<property name="LootDropProb" value="0.05"/>
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_FEMALE_GG_RADIATED" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Female_GG_Zombie_Radiated_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+				<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+		<entity_class name="REGULAR_FEMALE_GG_FERAL" extends="zombieTemplateShort">	
+				<property name="UserSpawnType" value="Menu"/>
+				<property name="Tags" value="entity,zombie,walker,feral"/>
+				<property name="Mesh" value="#@modfolder:Resources/Zombies_GG_TE.unity3d?Regular_Female_GG_Zombie_Feral_TE.prefab"/>
+				<property name="AvatarController" value="AvatarZombieController"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="PhysicsBody"  value="mixamoBasicRig"/>
+				<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+				<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+				<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+				<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+				<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+				<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+				<property name="WalkType" value="5"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+				<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+				<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- slim, feral -->
+				<property name="JumpMaxDistance" value="4.6, 5"/>
+				<property name="HandItem" value="meleeHandZombieShortFeral"/>
+				<property name="RightHandJointName" value="RightHand"/>
+				<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+				<property name="LootDropProb" value=".03"/> <!-- Feral -->
+				<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="550"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set"  value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+			</effect_group>	
+				<property name="Mass" value="120"/>
+				<property name="Weight" value="200"/>    
+				<property name="SizeScale" value="1"/>  
+		</entity_class>
+
+	</append>
+
+</Config>

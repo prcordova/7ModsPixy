@@ -1,0 +1,10 @@
+<mod>
+	<info>
+		<author>LuckyIsh</author>
+		<name>Craftable Lights</name>
+		<description>Add a crafting recipe for most lights in the game.</description>
+		<mod_version>1.0</mod_version>
+		<game_version>21.0</game_version>
+		<launcher_version>0.7.3</launcher_version>
+	</info>
+</mod>

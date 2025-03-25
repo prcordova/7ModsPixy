@@ -1,0 +1,501 @@
+<configs>
+<append xpath="/items">
+
+<item name="IZYShieldtest">
+	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZYBatonTEST.unity3d?IZYBatonTEST.Prefab"/>
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="MmeleeWpnClubParts"/>
+	<property name="Weight" value="1"/>
+	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="1100"/>
+	<property name="TraderStageTemplate" value="baseTier2"/><!-- meleeWpnClubT3SteelClub -->
+	<property name="UnlockedBy" value="craftingClubs"/><!-- perkBatterUpBaseballBats, -->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="SoundPickup" value="club_metal_grab"/>
+	<property name="SoundPlace" value="club_metal_place"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="batwood_swinglight"/>
+		<property name="Sphere" value=".1"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="120"/>
+	<property class="HitSounds">
+		<property name="Override0" value="organic" param1="metalhitorganic"/>
+	</property>
+	<property class="GrazeSounds">
+		<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+	</property>
+	</property>
+	
+	<property class="Action1">  <!-- GUN AIM AS Blocking -->
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="70"/>
+		<property name="Zoom_max_in" value="70"/>
+	        <property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+	        <property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+	</property>
+	
+	<effect_group name="meleeWpnClubT3SteelClub">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="52" tags="perkPummelPete,perkFlurryOfStrength"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="23.7" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6" tags="perkPummelPete"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkPummelPete"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkPummelPete"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="32.5" tags="perkPummelPete"/> <!-- meleeWpnClubT3SteelClub -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkPummelPete"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkPummelPete"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="30" tags="perkPummelPete"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkPummelPete"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkPummelPete"/> <!-- tier bonus -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+	</effect_group>
+						<!--	BLOCKING EFFECT -->	
+	
+	<effect_group name="AIMasblock" tiered="false">
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="add" value="1000"/>
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="set" value="1083">
+			<requirement name="CVarCompare" cvar="$buffDrugFortBitesDuration" operation="GT" value="1083"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffDrugFortBites"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffDrugFortBites"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDrugFortBites"/>
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffHoldBreathAiming01"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffHoldBreathAiming01"/>
+		<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffHoldBreathAiming01"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHoldBreathAiming01"/>
+		<triggered_effect trigger="onSelfAimingGunStop" action="RemoveBuff" buff="buffHoldBreathAiming01"/>
+		<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffHoldBreathAiming01"/>
+	</effect_group>
+	
+	<effect_group name="Blocksoundactivate" tiered="false">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="shieldhitsound"/>
+	</effect_group>
+	
+	<effect_group name="Blocksoundactivate" tiered="false">
+		<requirement name="IsAiming"/>
+		<triggered_effect trigger="onOtherAttackedSelf" action="SetTransformActive" active="true" transform_path="shieldhitsound"/>
+	</effect_group>
+	
+						<!--	Hide Holdtype Hands -->	
+	<effect_group>
+		<requirement name="IsFPV"/>
+						<!--	Raw hands -->	
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="body"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="body"/>
+						<!--	Armor part -->
+	</effect_group>
+	
+	<effect_group>
+		<requirement name="IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+								<!--	SHOW CUS_hands -->	
+							
+	<effect_group name="HANDSHOW" tiered="false">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP"/>
+		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+	</effect_group>
+	
+</item>
+
+<item name="TestmeleeMACE4">
+	<property name="Tags" value="IZY,IZYMELEE,blunt,longShaft,melee,grunting,club,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,sledgeSkill"/>
+	<property name="DisplayType" value="meleeHeavy"/>
+	<property name="HoldType" value="33"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZY_Melee_Mace4.unity3d?IZY_Melee_Mace4.Prefab"/>
+	<property name="Material" value="MmeleeWpnSledgeParts"/>
+	<property name="TintColor" value="60, 0, 0"/>
+	<property name="Weight" value="1"/>
+	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
+	<property name="EconomicValue" value="1100"/>
+	<property name="TraderStageTemplate" value="baseTier2"/><!-- meleeWpnSledgeT3SteelSledgehammer -->
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="UnlockedBy" value="craftingSledgehammers"/><!-- meleeWpnSledgeT3SteelSledgehammerSchematic, -->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="SoundPickup" value="sledgehammer_steel_grab"/>
+	<property name="SoundPlace" value="sledgehammer_steel_place"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/> <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="sledge_swinglight"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="60"/>
+		<property name="Zoom_max_in" value="60"/>
+		<property name="SightsCameraOffset" value="-.00218,-.0082,.012"/>
+		<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+		<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+	</property>
+	<effect_group name="meleeWpnSledgeT3SteelSledgehammer">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/> <!-- MUST STAY AT THIS value SPEED or the animation will NOT SYNC-->
+		<passive_effect name="StaminaLoss" operation="base_set" value="35" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="400,800" tier="1,6" tags="perkSkullCrusher"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+		<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="80" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT3SteelSledgehammer -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="85" tags="perkSkullCrusher"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+	</effect_group>
+	
+	<effect_group name="Blocking">
+						<!--	Shield Bonus -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="IZYBuff2Handsblocking">
+				<requirement name="!HasBuff" buff="IZYBuffhitting01"/>
+				<requirement name="!HasBuff" buff="IZYBuff2Handsblocking"/>
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="RemoveBuff" buff="IZYBuff2Handsblocking">
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYBuff2Handsblocking">
+		</triggered_effect>
+		<!-- Attack recieve sound when blocking -->
+		<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="organichitmetal">
+			<requirement name="IsFPV"/>
+			<requirement name="HasBuff" buff="IZYBuff2Handsblocking"/>
+		</triggered_effect>
+		
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+						<!--	boarder dark -->	
+		<triggered_effect trigger="onSelfAimingGunStart" action="ModifyScreenEffect" effect_name="Dark" intensity="1" fade=".3"/>
+		<triggered_effect trigger="onSelfAimingGunStop" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade=".3"/>
+		
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="IZYBuffhitting01">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+						<!--	HITsound -->	
+		<triggered_effect trigger="onSelfDamagedOther" action="PlaySound" sound="MACE_HIT_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+						<!--	Killsound -->	
+		<triggered_effect trigger="onSelfKilledOther" action="PlaySound" sound="MACE_kill_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2"/>
+					<!-- FANCY EFFECT _  -->
+					<!-- FANCY EFFECT _  -->
+					<!-- FANCY EFFECT _  -->
+	</effect_group>
+	
+	<effect_group name="HANDS">
+						<!--	SHOW HIDE FPV TPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP"/>
+		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP"/>
+	</effect_group>
+						<!--	Hide Holdtype Hands -->	
+	<effect_group>
+		<requirement name="IsFPV"/>
+						<!--	Raw hands -->	
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="body"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="body"/>
+						<!--	Armor part -->
+	</effect_group>
+	
+	<effect_group>
+		<requirement name="IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+	
+						<!--	Refresh hands when no glove is on -->	
+	<effect_group>
+		<requirement name="ItemHasTags" tags="IZY"/>
+				<requirement name="!HasBuff" buff="WearingArmorMilitaryGrey"/>
+				<requirement name="!HasBuff" buff="WearingArmorClothTan"/>
+				<requirement name="!HasBuff" buff="WearingArmorLeather"/>
+				<requirement name="!HasBuff" buff="WearingArmorLeatherIron"/>
+				<requirement name="!HasBuff" buff="WearingArmorSteel"/>
+				<requirement name="!HasBuff" buff="WearingArmorBlackLeather"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="RefreshHand"/>
+	</effect_group>
+</item>
+
+<item name="TestmeleeSWORD4">
+	<property name="Tags" value="IZY,IZYMELEE,blunt,longShaft,melee,grunting,club,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,sledgeSkill"/>
+	<property name="DisplayType" value="meleeHeavy"/>
+	<property name="HoldType" value="65"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZY_Melee_Mace4.unity3d?IZY_Melee_Sword4.Prefab"/>
+	<property name="Material" value="MmeleeWpnSledgeParts"/>
+	<property name="TintColor" value="60, 0, 0"/>
+	<property name="Weight" value="1"/>
+	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
+	<property name="EconomicValue" value="1100"/>
+	<property name="TraderStageTemplate" value="baseTier2"/><!-- meleeWpnSledgeT3SteelSledgehammer -->
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="UnlockedBy" value="craftingSledgehammers"/><!-- meleeWpnSledgeT3SteelSledgehammerSchematic, -->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="SoundPickup" value="sledgehammer_steel_grab"/>
+	<property name="SoundPlace" value="sledgehammer_steel_place"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/> <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="sledge_swinglight"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="60"/>
+		<property name="Zoom_max_in" value="60"/>
+		<property name="SightsCameraOffset" value="-.00218,-.0082,.012"/>
+		<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+		<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+	</property>
+	<effect_group name="meleeWpnSledgeT3SteelSledgehammer">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="62"/> <!-- MUST STAY AT THIS value SPEED or the animation will NOT SYNC-->
+		<passive_effect name="StaminaLoss" operation="base_set" value="25" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="400,800" tier="1,6" tags="perkSkullCrusher"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+		<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="60" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT3SteelSledgehammer -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="85" tags="perkSkullCrusher"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkSkullCrusher"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+	</effect_group>
+	
+	<effect_group name="Blocking">
+						<!--	Shield Bonus -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="IZYBuff2Handsblocking">
+				<requirement name="!HasBuff" buff="IZYBuffhitting01"/>
+				<requirement name="!HasBuff" buff="IZYBuff2Handsblocking"/>
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="RemoveBuff" buff="IZYBuff2Handsblocking">
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYBuff2Handsblocking">
+		</triggered_effect>
+		<!-- Attack recieve sound when blocking -->
+		<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="organichitmetal">
+			<requirement name="IsFPV"/>
+			<requirement name="HasBuff" buff="IZYBuff2Handsblocking"/>
+		</triggered_effect>
+		
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+			<!-- FANCY EFFECT _ REMOVE BELOW IF DO NOT WANT -->
+						<!--	boarder dark -->	
+		<triggered_effect trigger="onSelfAimingGunStart" action="ModifyScreenEffect" effect_name="Dark" intensity="1" fade=".3"/>
+		<triggered_effect trigger="onSelfAimingGunStop" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade=".3"/>
+		
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="IZYBuffhitting01">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftKnuckles"/>
+						<!--	HITsound -->	
+		<triggered_effect trigger="onSelfDamagedOther" action="PlaySound" sound="MACE_HIT_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+						<!--	Killsound -->	
+		<triggered_effect trigger="onSelfKilledOther" action="PlaySound" sound="MACE_kill_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits2"/>
+					<!-- FANCY EFFECT _  -->
+					<!-- FANCY EFFECT _  -->
+					<!-- FANCY EFFECT _  -->
+	</effect_group>
+	
+	<effect_group name="HANDS">
+						<!--	SHOW HIDE FPV TPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP"/>
+		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="3rdPV_GROUP"/>
+	</effect_group>
+						<!--	Hide Holdtype Hands -->	
+	<effect_group>
+		<requirement name="IsFPV"/>
+						<!--	Raw hands -->	
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" transform_path="body"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="hands"/>
+		<triggered_effect trigger="onSelfCrouch" action="SetTransformActive" active="false" transform_path="body"/>
+						<!--	Armor part -->
+	</effect_group>
+	
+	<effect_group>
+		<requirement name="IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="!IsMale"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="hands"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="body"/>
+	</effect_group>
+	
+						<!--	Refresh hands when no glove is on -->	
+	<effect_group>
+		<requirement name="ItemHasTags" tags="IZY"/>
+				<requirement name="!HasBuff" buff="WearingArmorMilitaryGrey"/>
+				<requirement name="!HasBuff" buff="WearingArmorClothTan"/>
+				<requirement name="!HasBuff" buff="WearingArmorLeather"/>
+				<requirement name="!HasBuff" buff="WearingArmorLeatherIron"/>
+				<requirement name="!HasBuff" buff="WearingArmorSteel"/>
+				<requirement name="!HasBuff" buff="WearingArmorBlackLeather"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="RefreshHand"/>
+	</effect_group>
+</item>
+
+</append>
+</configs>

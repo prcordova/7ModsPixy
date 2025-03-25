@@ -1,0 +1,19 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+
+IZYgunT0SMGPIPEsubmachinegun,items,gun,,.Pipe Sub-Machinegun(T0),Pipe Sub-Machinegun(T0),,,,,,,,,,,,,,
+IZYgunT0SMGPIPEsubmachinegunDesc,items,gun,,,A simple handmade Sub-Machinegun.\nMade out of metal pipe and s**ts.\nChambered in 9mm.\nRepair with a - Metal Pipe.\nScrap to - ScrapIron.\n\nA community member made this model (Swope25) o7.,,,,,,,,,,,,,,,
+IZYgunT2SMGUZIsubmachinegun,items,gun,,.UZI Sub-Machinegun(T2),UZI Sub-Machinegun(T2),,,,,,,,,,,,,,
+IZYgunT2SMGUZIsubmachinegunDesc,items,gun,,,A Israel made Sub-Machinegun.\nCompact and easy to use.\nChambered in 9mm.\nRepair with a - Repair tool.\nScrap to - Machinegun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT3SMGMP5Ksubmachinegun,items,gun,,.MP5K(T3),MP5K(T3),,,,,,,,,,,,,,
+IZYgunT3SMGMP5KsubmachinegunDesc,items,gun,,,A Compact version of MP5.\nChambered in 9mm.\nRepair with a - Repair tool.\nScrap to - Machinegun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT4SMGColt9mmsubmachinegun,items,gun,,.Kolt 9mm Submachinegun(T4),Kolt 9mm Submachinegun(T4),,,,,,,,,,,,,,
+IZYgunT4SMGColt9mmsubmachinegunDesc,items,gun,,,An AR-15 Style submachinegun.\nChambered in 9mm.\nRepair with a - Advanced Repair Kit.\nScrap to - Machinegun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT1DualPistolCOLTnavyRevolver,items,gun,,.Dual-Kolt Navy Revolvers(T1),Dual-Kolt Navy Revolvers(T1),,,,,,,,,,,,,,
+IZYgunT1DualPistolCOLTnavyRevolverDesc,items,gun,,,An old 1800s Revolver with custom modern-cylinder .\nChambered in 9mm.\nRepair with a - Repair Kit.\nScrap to - Handgun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT2DualPistolM9bs,items,gun,,.Dual-M9 Pistols(T2),Dual-M9 Pistols(T2),,,,,,,,,,,,,,
+IZYgunT2DualPistolM9bsDesc,items,gun,,,A Famous Italian made handgun .\nUse 9mm.\nRepair with a - Repair Kit.\nScrap to - Handgun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT3DualPistolGlock18C,items,gun,,.Dual-G18C(T3),Dual-G18C(T3),,,,,,,,,,,,,,
+IZYgunT3DualPistolGlock18CDesc,items,gun,,,A light weight handgun .\nUse 9mm.\nRepair with a - Repair Kit.\nScrap to - Handgun parts.\n.,,,,,,,,,,,,,,,
+IZYgunT4DualPistolC96M,items,gun,,.Dual-C96A(T4),Dual-C96A(T4),,,,,,,,,,,,,,
+IZYgunT4DualPistolC96MDesc,items,gun,,,An old 1800s pistol with fully automatic modified .\nUse 9mm.\nRepair with a - Advanced Repair Kit.\nScrap to - Handgun parts.\n.,,,,,,,,,,,,,,,

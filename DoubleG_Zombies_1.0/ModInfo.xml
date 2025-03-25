@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="DoubleG_Zombies_1_0" />
+	<DisplayName value="DoubleG_Zombies_1_0" />
+	<Description value="7 new zombie models to help expand the vanilla zombie experience. Additional coding by TormentedEmu" />
+	<Author value="DoubleG" />
+	<Version value="1.0" />
+	<Website value="www.youtube.com/@YTDoubleG" />
+	<SkipWithAntiCheat value="false" />
+</xml>

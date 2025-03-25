@@ -1,0 +1,15 @@
+Increased craft time to be more in line with vanilla door tiers.
+	craftableDoorsCommercialBulletproofGlassDoor: 2 -> 78
+	craftableDoorsManholeHatch: 2 -> 50
+	craftableDoorsSecruityGates: 2 -> 180
+	craftableDoorsElevatorDoors: 2 -> 120
+	craftableDoorsSingleJailDoors: 2 -> 110
+	craftableDoorsDoubleJailDoors: 2 -> 110
+	craftableDoorsDoubleBulletproofGlassDoors: 2 -> 78
+	craftableDoorsSingleStrongMetalDoors: 2 -> 20
+	craftableDoorsDoubleStrongMetalDoors: 2 -> 20
+	
+	
+Reduced cost of double jail door variant block. resourceForgedIron: 20 -> 15
+		
+Renamed craftableDoorsDoubleWeakMetalDoors to craftableDoorsDoubleGlassDoors. To better reflect that the doors in this variant helper block all appear to be glass doors.

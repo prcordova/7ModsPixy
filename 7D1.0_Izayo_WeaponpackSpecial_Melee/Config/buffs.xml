@@ -1,0 +1,50 @@
+<configs>
+
+				<!--	BUFF THAT MAKE GLOVES VISIBLE	    -->
+
+
+
+	<append xpath="/buffs">
+		
+		<buff name="IZYBuff2Handsblocking" hidden="false" icon="ui_game_symbol_twitch_shield_enemies" icon_color="0,255,0" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" duration="0,1" value="0,.8"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" duration="1,9999" value=".8,.8"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".8" tags="buffInfectionCatch,buffInfection01Main,buffInjuryBleeding,buffArmorShredding,buffInjuryAbrasion,buffInjuryAbrasionTreated,buffLegSprained,buffLegBroken,buffLegSplinted,buffLegCast,buffArmSprained"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".8" tags="buffInjuryConcussion,buffArmBroken,buffInjuryStunned01,buffInjuryStunned02,buffInjuryStunned03,buffInjuryCrippled01,buffInjuryKnockdown01,buffInjuryKnockdown01,buffInjuryUnconscious,buffLaceration,buffFatigued"/>
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="HoldingItemHas Tags" tags="IZYMELEE"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" duration="0,1" value="-3,-3"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" duration="1,9999" value="-2,-2"/>
+			</effect_group>
+		</buff>		
+		
+		<buff name="IZYBuffhitting01" hidden="true" icon="ui_game_symbol_sledge" icon_color="255,128,0" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0.8"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Dark" intensity=".5" fade=".1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade=".2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="Buffcomeandtakeit" hidden="true" icon="ui_game_symbol_twitch_shield_enemies" icon_color="0,255,0" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="IZYMELEE"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" duration="0,1" value="0,.5"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" duration="1,9999" value=".5,.5"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".8" tags="buffInfectionCatch,buffInfection01Main,buffInjuryBleeding,buffArmorShredding,buffInjuryAbrasion,buffInjuryAbrasionTreated,buffLegSprained,buffLegBroken,buffLegSplinted,buffLegCast,buffArmSprained"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".8" tags="buffInjuryConcussion,buffArmBroken,buffInjuryStunned01,buffInjuryStunned02,buffInjuryStunned03,buffInjuryCrippled01,buffInjuryKnockdown01,buffInjuryKnockdown01,buffInjuryUnconscious,buffLaceration,buffFatigued"/>
+			</effect_group>
+		</buff>		
+	</append>
+
+</configs>

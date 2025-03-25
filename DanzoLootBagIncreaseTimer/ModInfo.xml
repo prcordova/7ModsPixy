@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="DanzoLootBagIncreaseTimer"/>
+	<DisplayName value="Danzo LootBag Increase Timer"/>
+	<Description value="Increases the time that loot bags remain on the ground."/>
+	<Author value="Danzo"/>
+	<Version value="1.1"/>
+	<Website value="https://www.youtube.com/DanzoX25"/>
+</xml>

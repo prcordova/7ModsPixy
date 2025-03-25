@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addnew>
+
+		<!--	Longbarrel		-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunBarrelExtender']">
+			
+	</append>
+
+		<!--	MAGAZINE-DRUM 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunDrumMagazineExtender']">
+			
+			<item_property_overrides name="IZYgunT3DualPistolGlock18C">
+				<property name="Meshfile" value="#@modfolder:Resources/IZY_9mm_Pack_MainResource_AkimboGuns.unity3d?IZY_DUALPISTOLS_G18C_drummag.Prefab"/>
+			</item_property_overrides>
+			
+	</append>
+
+		<!--	MAGAZINE-EXT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']">
+		
+	</append>
+
+			<!--	FORGRIP 	-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunForegrip']">
+
+		<item_property_overrides name="IZYgunT2SMGUZIsubmachinegun">
+			<property name="Meshfile" value="#@modfolder:Resources/IZY_9mm_Pack_MainResource.unity3d?IZY_SMG_Uzi_grip.Prefab"/>
+		</item_property_overrides>
+		
+	</append>
+
+		<!--	RET-STOCK 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
+	
+			
+	</append>
+
+		<!--	FLASHLIGHT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+	
+			
+	</append>
+
+		<!--	LASER   	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+	
+			
+	</append>
+
+		<!--	REFLEXSIGHT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+
+			<!--	T0 PIPE SMG	-->
+			<item_property_overrides name="IZYgunT0SMGPIPEsubmachinegun">
+				<property name="ScopeCameraOffset" value=".0007,.0182,.195"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+		<!--	TRA-SMG 	-->
+			
+		<!--	TAC-SMG 	-->
+			
+			<item_property_overrides name="IZYgunT2SMGUZIsubmachinegun">
+				<property name="ScopeCameraOffset" value="0,-.051,.2"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3SMGMP5Ksubmachinegun">
+				<property name="ScopeCameraOffset" value=".0001,-.0076,-.01"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+
+			<item_property_overrides name="IZYgunT4SMGColt9mmsubmachinegun">
+				<property name="ScopeCameraOffset" value="-.0008,-.0225,.01"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+	</append>
+	
+		<!--	2XSCOPE	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+			<!--	T0 PIPE SMG	-->
+			<item_property_overrides name="IZYgunT0SMGPIPEsubmachinegun">
+				<property name="ScopeCameraOffset" value=".0007,.0075,.17"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<!--	TAC-PISTOL	-->
+			
+			<item_property_overrides name="IZYgunT2SMGUZIsubmachinegun">
+				<property name="ScopeCameraOffset" value="0,-.0355,.2"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3SMGMP5Ksubmachinegun">
+				<property name="ScopeCameraOffset" value="0,-.0093,-.01"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+
+			<item_property_overrides name="IZYgunT4SMGColt9mmsubmachinegun">
+				<property name="ScopeCameraOffset" value="-.0008,-.022,.01"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+	</append>
+	
+		<!--	Silencer 	-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+			
+			<item_property_overrides name="IZYgunT0SMGPIPEsubmachinegun">
+				<property name="Sound_start" value="UZIsmg_silen_fire"/>
+				<property name="Sound_loop" value="UZIsmg_silen_fire"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2SMGUZIsubmachinegun">
+				<property name="Sound_start" value="UZIsmg_silen_fire"/>
+				<property name="Sound_loop" value="UZIsmg_silen_fire"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3SMGMP5Ksubmachinegun">
+				<property name="Sound_start" value="MP5Ksmg_silen_fire"/>
+				<property name="Sound_loop" value="MP5Ksmg_silen_fire"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4SMGColt9mmsubmachinegun">
+				<property name="Sound_start" value="MP5Ksmg_silen_fire"/>
+				<property name="Sound_loop" value="MP5Ksmg_silen_fire"/>
+			</item_property_overrides>
+	
+	</append>
+	
+</addnew>

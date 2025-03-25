@@ -1,0 +1,82 @@
+<configs>
+
+				<!--	BUFF THAT MAKE GLOVES VISIBLE	    -->
+
+
+
+	<append xpath="/buffs">
+
+		<buff name="01Pocketmod" hidden="true" icon="ui_game_symbol_lightbulb" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="IsFPV"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Pocket_modgroup_left"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Pocket_modgroup_left"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Pocket_modgroup_left"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Pocket_modgroup_right"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Pocket_modgroup_right"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Pocket_modgroup_right"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="01PlatingmodSteel" hidden="true" icon="ui_game_symbol_lightbulb" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="IsFPV"/>
+				<requirement name="HasBuff" buff="WearingArmorBrownLeather"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm002"/>
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="IsFPV"/>
+				<requirement name="HasBuff" buff="WearingArmorBlackLeather"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm002"/>
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="IsFPV"/>
+				<requirement name="HasBuff" buff="WearingArmorDarkLeather"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm001"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Armormod_Steelplat_Forarm002"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Armormod_Steelplat_Forarm002"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="IZYAUTOPISTOLEffect" hidden="true" icon="ui_game_symbol_lightbulb" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group tiered="false">
+				<passive_effect name="BurstRoundCount" operation="base_set" value="999"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".25"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="2"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="IZYBURSTPISTOLEffect" hidden="true" icon="ui_game_symbol_lightbulb" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group tiered="false">
+				<passive_effect name="BurstRoundCount" operation="base_set" value="999"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".25"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="2"/>
+			</effect_group>
+		</buff>
+		
+	</append>
+
+</configs>

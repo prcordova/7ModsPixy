@@ -1,0 +1,106 @@
+<configs>
+
+<append xpath="/recipes">
+	
+<recipe name="craftableDoorsWoodLargeGate" count="1" craft_time="2">
+	<ingredient name="resourceWood" count="125"/>
+</recipe>
+
+<recipe name="craftableDoorsCommercialBulletproofGlassDoor" count="1" material_based="true" craft_time="78" craft_area="forge" craft_tool="toolForgeCrucible">
+	<ingredient name="unit_glass" count="110"/>
+	<ingredient name="unit_stone" count="10"/>
+	<ingredient name="unit_lead" count="40"/>
+	<ingredient name="unit_iron" count="20"/>
+	<ingredient name="unit_clay" count="20"/>
+</recipe>
+
+<recipe name="craftableDoorsManholeHatch" count="1" craft_time="50">
+	<ingredient name="resourceForgedIron" count="3"/>
+</recipe>
+
+<recipe name="craftableDoorsSecruityGates" count="1" craft_time="180">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="resourceSpring" count="20"/>
+	<ingredient name="resourceMechanicalParts" count="20"/>
+</recipe>
+
+<recipe name="craftableDoorsElevatorDoors" count="1" craft_time="120">
+	<ingredient name="resourceForgedSteel" count="6"/>
+	<ingredient name="resourceSpring" count="6"/>
+	<ingredient name="resourceMechanicalParts" count="6"/>
+</recipe>
+
+<recipe name="craftableDoorsChainlinkFenceGates" count="1" craft_time="2">
+	<ingredient name="resourceScrapIron" count="10"/>
+</recipe>
+
+<recipe name="craftableDoorsSingleJailDoors" count="1" craft_time="110">
+	<ingredient name="resourceForgedIron" count="15"/>
+	<ingredient name="resourceMechanicalParts" count="5"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleJailDoors" count="1" craft_time="110">
+	<ingredient name="resourceForgedIron" count="15"/>
+	<ingredient name="resourceMechanicalParts" count="5"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleBulletproofGlassDoors" count="1" material_based="true" craft_time="78" craft_area="forge" craft_tool="toolForgeCrucible">
+	<ingredient name="unit_glass" count="220"/>
+	<ingredient name="unit_stone" count="20"/>
+	<ingredient name="unit_lead" count="80"/>
+	<ingredient name="unit_iron" count="40"/>
+	<ingredient name="unit_clay" count="40"/>
+</recipe>
+
+<recipe name="craftableDoorsSingleDecorativeDoors" count="1" craft_time="1">
+	<ingredient name="resourceWood" count="1"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleDecorativeDoors" count="1" craft_time="1">
+	<ingredient name="resourceWood" count="2"/>
+</recipe>
+
+<recipe name="craftableDoorsSingleWoodenDoors" count="1" craft_time="2">
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleWoodenDoors" count="1" craft_time="2">
+	<ingredient name="resourceWood" count="20"/>
+</recipe>
+
+<recipe name="craftableDoorsSingleWeakMetalDoors" count="1" craft_time="2">
+	<ingredient name="resourceScrapIron" count="10"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleGlassDoors" count="1" craft_time="2">
+	<ingredient name="resourceScrapIron" count="20"/>
+</recipe>
+
+<recipe name="craftableDoorsSingleStrongMetalDoors" count="1" craft_time="20">
+	<ingredient name="resourceForgedIron" count="2"/>
+</recipe>
+
+<recipe name="craftableDoorsDoubleStrongMetalDoors" count="1" craft_time="20">
+	<ingredient name="resourceForgedIron" count="4"/>
+</recipe>
+
+<recipe name="craftableDoorsPortaPotties" count="1" craft_time="2">
+	<ingredient name="resourceScrapPolymers" count="20"/>
+</recipe>
+
+</append>
+
+</configs>
+
+<!--<ingredient name="resourceWood" count="1"/>-->
+<!--<ingredient name="resourceScrapIron" count="6"/>-->
+<!--<ingredient name="resourceForgedIron" count="1"/>-->
+<!--<ingredient name="resourceForgedSteel" count="1"/>-->
+<!--<ingredient name="resourceScrapPolymers" count="1"/>-->
+<!--<ingredient name="resourceSpring" count="2"/>-->
+<!--<ingredient name="resourceMechanicalParts" count="6"/>-->
+<!--<ingredient name="unit_glass" count="110"/>-->
+<!--<ingredient name="unit_stone" count="10"/>-->
+<!--<ingredient name="unit_lead" count="40"/>-->
+<!--<ingredient name="unit_iron" count="20"/>-->
+<!--<ingredient name="unit_clay" count="20"/>-->
