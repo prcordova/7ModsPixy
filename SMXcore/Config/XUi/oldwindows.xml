@@ -469,7 +469,34 @@
 							</rect>
 
 							<!-- SMX COMMENT: This module contains the vehicle unit frame design in the lower right corner. -->
-					 
+							<rect name="smxhud_vehicle_stats" pos="-140,0" width="350" height="80">
+
+								<!-- SMX COMMENT: This module contains the vehicle health bar in the lower right corner. -->
+								<rect name="smxhud_vehiclestat_health" depth="12" pos="-14,-8" width="240" height="55" controller="SMXcore.HUDStatBar, SMXcore" stat_type="VehicleHealth" visible="{statvisible}">
+									<sprite name="smxhud_vehicle_frameseparator" depth="3" pos="-85,-36" width="195" height="3" sprite="smx_sepline_1" rotation="0" color="[smxhud_unitframe_separation]" globalopacitymod="1.8" />
+									<sprite name="background" depth="2" pos="-95,-8" width="205" height="28" sprite="smx_unitframe_healthbar_empty" flip="horizontally" color="[smxhud_unitframe_main_background]" globalopacitymod="1.8" />
+									<filledsprite name="BarContent" depth="5" pos="-95,-8" width="205" height="28" sprite="smx_unitframe_healthbar_fill" type="filled" fill="0" fillinvert="true" flip="horizontally" color="[smxhud_vehicle_health_bar]" globalopacitymod="1.8" tooltip_key="xuiVehicleHealthBarHUD" />
+									<sprite name="Icon" depth="7" pos="74,-12" size="18,18" sprite="ui_game_symbol_wrench" color="[smxhud_element_iconcolor_1]" foregroundlayer="true" />
+									<label name="TextContent" depth="7" pos="-65,-16" width="100" height="26" style="smx_label_normal" text=" [I]{statcurrent} / [C0C0C0]{statmax}[-][/I] " font_size="13" color="[smxhud_element_labelcolor_1]" justify="right" pivot="center" />
+
+									<label name="TextContent" depth="16" pos="-65,0" width="100" height="30" style="smx_label_normal" text="{elevation}" font_size="18" pivot="center" justify="right" color="[smxhud_element_labelcolor_3]" tooltip_key="xuiElevationHUD" />
+
+								</rect>
+
+								<!-- SMX COMMENT: This module contains the vehicle fuel bar in the lower right corner. -->
+								<rect name="smxhud_vehiclestat_fuel" depth="14" pos="0,0" width="110" height="110" controller="SMXcore.HUDStatBar, SMXcore" stat_type="VehicleFuel" visible="{statvisible}">
+
+									<!-- SMX COMMENT: Experimental Code. -->
+									<!--sprite name="fuel1" depth="11" pos="50,230" size="120,120" sprite="fuel1" pivot="center" globalopacitymod="1.8" />
+									<sprite name="fuel2" depth="12" pos="50,230" size="15,75" sprite="fuel2" pivot="center" globalopacitymod="1.8" controller="XUiC_DialIndicator, SMXui" indicator_value="{vehiclespeed}" start_angle="135" end_angle="-135" range_min="0" range_max="1" limit_indicator_to_range="true" /-->
+
+									<sprite name="background" depth="2" pos="-103,-38" width="184" height="22" sprite="smx_unitframe_staminabar_empty" flip="horizontally" color="[smxhud_unitframe_main_background]" globalopacitymod="1.8" />
+									<filledsprite name="BarContent" depth="5" pos="-103,-48" width="184" height="22" sprite="smx_unitframe_staminabar_fill" type="filled" fill="0" fillinvert="true" flip="horizontally" color="[smxhud_vehicle_fuel_bar]" globalopacitymod="1.8" tooltip_key="xuiVehicleFuelBarHUD" />
+									<sprite name="Icon" depth="7" pos="58,-49" size="18,18" sprite="ui_game_symbol_gas" color="[smxhud_element_iconcolor_1]" foregroundlayer="true" />
+
+									<label name="TextContent" depth="7" pos="-100,-56" width="100" height="26" style="smx_label_normal" text=" [I]{statcurrentwithmax}[/I] " font_size="13" color="[smxhud_element_labelcolor_1]" justify="right" pivot="center" />
+								</rect>
+							</rect>
 						</rect>
 					</window>
 				</append>
